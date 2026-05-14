@@ -128,18 +128,21 @@ AI 负责：
 | 国内或低成本备选 | GLM-5.1、Kimi K2.6、DeepSeek V4-Pro / V4-Flash、MiniMax M2.5、Qwen 3.6 Plus |
 | Google 路线 | Gemini 3.1 Pro Preview |
 
-### 进阶工具
+<details>
+<summary>进阶工具：跑通第一个项目后再看</summary>
 
 等你跑通第一个项目，再看这些：
 
-- Claude Code：适合复杂项目、终端工作流、代码库级修改。
-- Codex CLI / ChatGPT Codex：适合大型代码任务、代码审查、自动化开发。
-- GitHub Copilot：适合已经在 GitHub 和 IDE 中工作的开发者。
-- Bolt / Lovable / v0：适合快速生成网页钱包界面或应用原型。
-- Semgrep：扫描安全问题和明显代码风险。
-- Playwright：让 AI 自动打开浏览器、点击页面、检查功能是否符合预期。
-- Graphite / CodeRabbit / Qodo：辅助代码评审。
-- MCP / SubAgent：让 AI 连接外部工具，或拆成多个角色协作。
+- [Claude Code](https://www.anthropic.com/claude-code)：适合复杂项目、终端工作流、代码库级修改。
+- [Codex CLI](https://github.com/openai/codex) / [ChatGPT Codex](https://chatgpt.com/codex)：适合大型代码任务、代码审查、自动化开发。
+- [GitHub Copilot](https://github.com/features/copilot)：适合已经在 GitHub 和 IDE 中工作的开发者。
+- [Bolt](https://bolt.new/) / [Lovable](https://lovable.dev/) / [v0](https://v0.dev/)：适合快速生成网页钱包界面或应用原型。
+- [Semgrep](https://semgrep.dev/)：扫描安全问题和明显代码风险。
+- [Playwright](https://playwright.dev/)：让 AI 自动打开浏览器、点击页面、检查功能是否符合预期。
+- [Graphite](https://graphite.dev/) / [CodeRabbit](https://www.coderabbit.ai/) / [Qodo](https://www.qodo.ai/)：辅助代码评审。
+- [MCP](https://modelcontextprotocol.io/) / [SubAgent](https://docs.anthropic.com/en/docs/claude-code/sub-agents)：让 AI 连接外部工具，或拆成多个角色协作。
+
+</details>
 
 ---
 
@@ -731,6 +734,9 @@ skills/tokencore-wallet/SKILL.md
 
 ---
 
+<details>
+<summary>做坏了怎么办：报错、页面不好看、AI 改乱了</summary>
+
 ## 做坏了怎么办
 
 小白一定会遇到报错。不要慌，报错是正常开发的一部分。
@@ -797,7 +803,12 @@ skills/tokencore-wallet/SKILL.md
 先不要写代码。
 ```
 
+</details>
+
 ---
+
+<details>
+<summary>新手项目目录：推荐保留哪些文档</summary>
 
 ## 新手项目目录
 
@@ -839,6 +850,8 @@ rg -n "project-brief.md|tech-stack.md|design.md|implementation-plan.md|review-ch
 rg --files -g "*.md"
 ```
 
+</details>
+
 ---
 
 ## 进阶学习路线
@@ -860,6 +873,9 @@ rg --files -g "*.md"
 
 ---
 
+<details>
+<summary>本仓库怎么用：提示词、技能和文档入口</summary>
+
 ## 本仓库怎么用
 
 这个仓库不是一个单独的软件项目，而是一个 AI 编程资料库。
@@ -880,7 +896,12 @@ rg --files -g "*.md"
 4. 部署到 Vercel。
 5. 再回来研究提示词库和技能库。
 
+</details>
+
 ---
+
+<details>
+<summary>常见问题：不会代码、项目变乱、何时新开聊天</summary>
 
 ## 常见问题
 
@@ -931,6 +952,8 @@ rg --files -g "*.md"
 - 你要从修 bug 切换到做新功能
 
 新聊天前，让 AI 先写 `progress.md`。
+
+</details>
 
 ---
 
