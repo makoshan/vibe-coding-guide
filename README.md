@@ -257,6 +257,9 @@ AI 编程时代，写代码本身反而不是最重要的部分。
 
 ---
 
+<details>
+<summary>如何一步一步开始：两个可以跟做的 Demo</summary>
+
 ## 如何一步一步开始
 
 这一节只保留两个可以跟做的 Demo，不讲大段概念。
@@ -272,40 +275,6 @@ AI 编程时代，写代码本身反而不是最重要的部分。
 
 - GitHub 仓库：[makoshan/MyWallet](https://github.com/makoshan/MyWallet)
 - 在线预览：[Passkey 多链钱包 Demo](https://makoshan.github.io/MyWallet/)
-
-这个 Demo 适合用来学习：
-
-- 如何把一个钱包想法拆成项目文档、设计规范、实施计划和验收清单。
-- 如何用 Passkey 做创建 / 解锁入口。
-- 如何展示 Ethereum、BSC、Bitcoin、Solana、TRON 多链地址。
-- 如何做 Receive 收款页，按链展示地址和二维码。
-- 如何做 Settings 页面，并在导出助记词前要求用户再次确认安全风险。
-- 如何用 GitHub Pages 部署一个前端 Demo。
-
-它不是正式钱包产品，学习时要记住：
-
-- 不要直接存入大额真实资产。
-- 不要把助记词、私钥、正式 API Key 写进代码、日志、截图或 GitHub。
-- 前端公开网页里的内容要默认视为所有人都能看到。
-- 后续如果加入签名和广播，必须先显示人能看懂的交易摘要，并要求用户二次确认。
-
-如果你想让 AI 先读这个 Demo，可以复制这段：
-
-```text
-请阅读这个 Demo 仓库：
-https://github.com/makoshan/MyWallet
-
-在线预览：
-https://makoshan.github.io/MyWallet/
-
-请先不要写代码。
-请用小白能懂的话总结：
-1. 这个 Demo 已经实现了哪些页面。
-2. 它支持哪些链。
-3. 它的 Passkey、收款页、设置页分别在做什么。
-4. 它还不是正式钱包产品的原因。
-5. 如果我要从零复刻一个类似 Demo，应该先做哪 5 个小步骤。
-```
 
 真实开发不是直线。你一开始可能会想做完整钱包：多链、余额、收款、转账、广播、邮箱登录、资产管理全都要。
 
@@ -732,6 +701,8 @@ skills/tokencore-wallet/SKILL.md
 5. 不需要推送 GitHub，除非我明确要求。
 ```
 
+</details>
+
 ---
 
 <details>
@@ -854,6 +825,9 @@ rg --files -g "*.md"
 
 ---
 
+<details>
+<summary>进阶学习路线：跑通第一个项目后再补能力</summary>
+
 ## 进阶学习路线
 
 参考 Stanford CS146S 和 Mihail Eric 的作业结构，可以按这个顺序进阶：
@@ -870,6 +844,8 @@ rg --files -g "*.md"
 | 8 | 多技术栈和部署 | 同一个想法能用不同方式实现并上线 |
 
 你不需要一天学完。每做一个小项目，就补一块能力。
+
+</details>
 
 ---
 
