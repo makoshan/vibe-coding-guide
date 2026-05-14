@@ -1,10 +1,6 @@
-<!--
--------------------------------------------------------------------------------
-  项目头部区域 (HEADER)
--------------------------------------------------------------------------------
--->
+<!-- markdownlint-disable MD013 MD033 MD041 -->
+
 <p align="center">
-  <!-- 建议尺寸: 1280x640px。可以使用 Canva, Figma 或 https://banners.beyondco.de/ 等工具制作 -->
   <img src="https://github.com/tukuaiai.png" alt="Vibe Coding 指南" width="80px">
 </p>
 
@@ -12,683 +8,950 @@
 
 # Vibe Coding 指南
 
-**一个通过与 AI 结对编程，将想法变为现实的终极工作站**
+**给完全非程序员看的 AI 编程入门手册：从一句话想法，到一个能打开、能点击、能分享的软件。**
 
 ---
 
-<!--
-  徽章区域 (BADGES)
--->
-<!-- 项目状态徽章 -->
 <p>
-  <a href="https://github.com/tukuaiai/vibe-coding-cn/actions"><img src="https://img.shields.io/github/actions/workflow/status/tukuaiai/vibe-coding-cn/main.yml?label=%E6%9E%84%E5%BB%BA%E7%8A%B6%E6%80%81&style=for-the-badge" alt="构建状态"></a>
-  <a href="https://github.com/tukuaiai/vibe-coding-cn/releases"><img src="https://img.shields.io/github/v/release/tukuaiai/vibe-coding-cn?label=%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC&style=for-the-badge" alt="最新版本"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/tukuaiai/vibe-coding-cn?label=%E8%AE%B8%E5%8F%AF%E8%AF%81&style=for-the-badge" alt="许可证"></a>
-  <a href="https://github.com/tukuaiai/vibe-coding-cn"><img src="https://img.shields.io/github/languages/top/tukuaiai/vibe-coding-cn?label=%E4%B8%BB%E8%A6%81%E8%AF%AD%E8%A8%80&style=for-the-badge" alt="主要语言"></a>
-  <a href="https://github.com/tukuaiai/vibe-coding-cn"><img src="https://img.shields.io/github/languages/code-size/tukuaiai/vibe-coding-cn?label=%E4%BB%A3%E7%A0%81%E9%87%8F&style=for-the-badge" alt="代码量"></a>
-  <a href="https://github.com/tukuaiai/vibe-coding-cn/graphs/contributors"><img src="https://img.shields.io/github/contributors/tukuaiai/vibe-coding-cn?label=%E8%B4%A1%E7%8C%AE%E8%80%85&style=for-the-badge" alt="贡献者"></a>
-  <a href="https://t.me/glue_coding"><img src="https://img.shields.io/badge/聊天-Telegram-blue?style=for-the-badge&logo=telegram" alt="交流群"></a>
-</p>
-
-<!-- 多语言入口 -->
-<p>
-  <a href="./i18n/zh/README.md"><img src="https://img.shields.io/badge/语言-中文-red?style=for-the-badge" alt="简体中文"></a>
-  <a href="./i18n/en/README.md"><img src="https://img.shields.io/badge/语言-English-lightgrey?style=for-the-badge" alt="English"></a>
-  <a href="./i18n/he/"><img src="https://img.shields.io/badge/语言-עברית-navy?style=for-the-badge" alt="Hebrew"></a>
-  <a href="./i18n/ar/"><img src="https://img.shields.io/badge/语言-العربية-brown?style=for-the-badge" alt="Arabic"></a>
-  <a href="./i18n/bn/"><img src="https://img.shields.io/badge/语言-বাংলা-orange?style=for-the-badge" alt="Bengali"></a>
-  <a href="./i18n/de/"><img src="https://img.shields.io/badge/语言-Deutsch-black?style=for-the-badge" alt="Deutsch"></a>
-  <a href="./i18n/es/"><img src="https://img.shields.io/badge/语言-Español-yellow?style=for-the-badge" alt="Español"></a>
-  <a href="./i18n/fa/"><img src="https://img.shields.io/badge/语言-فارسی-purple?style=for-the-badge" alt="Farsi"></a>
-  <a href="./i18n/fr/"><img src="https://img.shields.io/badge/语言-Français-blue?style=for-the-badge" alt="Français"></a>
-  <a href="./i18n/ha/"><img src="https://img.shields.io/badge/语言-Hausa-darkgreen?style=for-the-badge" alt="Hausa"></a>
-  <a href="./i18n/hi/"><img src="https://img.shields.io/badge/语言-हिन्दी-darkorange?style=for-the-badge" alt="Hindi"></a>
-  <a href="./i18n/id/"><img src="https://img.shields.io/badge/语言-Bahasa%20Indonesia-teal?style=for-the-badge" alt="Bahasa Indonesia"></a>
-  <a href="./i18n/it/"><img src="https://img.shields.io/badge/语言-Italiano-green?style=for-the-badge" alt="Italiano"></a>
-  <a href="./i18n/ja/"><img src="https://img.shields.io/badge/语言-日本語-indigo?style=for-the-badge" alt="日本語"></a>
-  <a href="./i18n/ko/"><img src="https://img.shields.io/badge/语言-한국어-slateblue?style=for-the-badge" alt="한국어"></a>
-  <a href="./i18n/ms/"><img src="https://img.shields.io/badge/语言-Bahasa%20Melayu-seagreen?style=for-the-badge" alt="Bahasa Melayu"></a>
-  <a href="./i18n/nl/"><img src="https://img.shields.io/badge/语言-Nederlands-darkred?style=for-the-badge" alt="Nederlands"></a>
-  <a href="./i18n/pl/"><img src="https://img.shields.io/badge/语言-Polski-crimson?style=for-the-badge" alt="Polski"></a>
-  <a href="./i18n/pt/"><img src="https://img.shields.io/badge/语言-Português-darkslategray?style=for-the-badge" alt="Português"></a>
-  <a href="./i18n/ru/"><img src="https://img.shields.io/badge/语言-Русский-steelblue?style=for-the-badge" alt="Русский"></a>
-  <a href="./i18n/sw/"><img src="https://img.shields.io/badge/语言-Kiswahili-forestgreen?style=for-the-badge" alt="Swahili"></a>
-  <a href="./i18n/ta/"><img src="https://img.shields.io/badge/语言-தமிழ்-darkmagenta?style=for-the-badge" alt="Tamil"></a>
-  <a href="./i18n/th/"><img src="https://img.shields.io/badge/语言-ไทย-royalblue?style=for-the-badge" alt="ภาษาไทย"></a>
-  <a href="./i18n/tr/"><img src="https://img.shields.io/badge/语言-Türkçe-firebrick?style=for-the-badge" alt="Türkçe"></a>
-  <a href="./i18n/uk/"><img src="https://img.shields.io/badge/语言-Українська-cornflowerblue?style=for-the-badge" alt="Українська"></a>
-  <a href="./i18n/ur/"><img src="https://img.shields.io/badge/语言-اردو-darkslateblue?style=for-the-badge" alt="Urdu"></a>
-  <a href="./i18n/vi/"><img src="https://img.shields.io/badge/语言-Tiếng%20Việt-darkgreen?style=for-the-badge" alt="Tiếng Việt"></a>
-</p>
-
-<!-- 资源直达 -->
-<p>
-  <a href="./i18n/zh/prompts/"><img src="https://img.shields.io/badge/提示词-精选-purple?style=for-the-badge" alt="提示词精选"></a>
-  <a href="./i18n/zh/skills/"><img src="https://img.shields.io/badge/skills-技能大全-forestgreen?style=for-the-badge" alt="skills技能大全"></a>
+  <a href="./prompts/"><img src="https://img.shields.io/badge/提示词-精选-purple?style=for-the-badge" alt="提示词精选"></a>
+  <a href="./skills/"><img src="https://img.shields.io/badge/Skills-技能大全-forestgreen?style=for-the-badge" alt="Skills 技能大全"></a>
   <a href="./libs/external/prompts-library/prompt_docs/"><img src="https://img.shields.io/badge/提示词-大全-orange?style=for-the-badge" alt="提示词大全"></a>
-  <a href="https://docs.google.com/spreadsheets/d/1ngoQOhJqdguwNAilCl1joNwTje7FWWN9WiI2bo5VhpU/edit?gid=2093180351#gid=2093180351&range=A1"><img src="https://img.shields.io/badge/提示词-在线表格(推荐)-blue?style=for-the-badge" alt="提示词在线表格（推荐）"></a>
-  <a href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools"><img src="https://img.shields.io/badge/系统提示词-仓库-slateblue?style=for-the-badge" alt="系统提示词仓库"></a>
+  <a href="https://docs.google.com/spreadsheets/d/1ngoQOhJqdguwNAilCl1joNwTje7FWWN9WiI2bo5VhpU/edit?gid=2093180351#gid=2093180351&range=A1"><img src="https://img.shields.io/badge/提示词-在线表格-blue?style=for-the-badge" alt="提示词在线表格"></a>
+  <a href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools"><img src="https://img.shields.io/badge/系统提示词-参考仓库-slateblue?style=for-the-badge" alt="系统提示词参考仓库"></a>
 </p>
-
-[📚 相关文档](#-相关文档与资源)
-[🚀 入门指南](#-入门指南)
-[⚙️ 完整设置流程](#️-完整设置流程)
-[📞 联系方式](#-联系方式)
-[✨ 支持项目](#-支持项目)
-[🤝 参与贡献](#-参与贡献)
-
-本仓库的 AI 解读链接：[zread.ai/tukuaiai/vibe-coding-cn](https://zread.ai/tukuaiai/vibe-coding-cn/1-overview)
 
 </div>
 
 ---
 
-## 🖼️ 概览
+## 先看这一段
 
-**Vibe Coding** 是一个与 AI 结对编程的终极工作流程，旨在帮助开发者丝滑地将想法变为现实。本指南详细介绍了从项目构思、技术选型、实施规划到具体开发、调试和扩展的全过程，强调以**规划驱动**和**模块化**为核心，避免让 AI 失控导致项目混乱。
+如果你完全不会编程，也可以先从这里开始。
 
-> **核心理念**: *规划就是一切。* 谨慎让 AI 自主规划，否则你的代码库会变成一团无法管理的乱麻。
+Vibe Coding 的核心不是“学会写代码”，而是“学会把想法讲清楚，让 AI 帮你把软件做出来”。
 
-**注意**：以下经验分享并非普遍适用，请在具体实践中结合场景，辩证采纳。
+你不需要一开始就理解所有代码。你需要先学会四件事：
 
-## 🔑 元方法论 (Meta-Methodology)
+1. 说清楚你要什么。
+2. 让 AI 先给计划，不要一上来乱写。
+3. 每次只做一个小功能。
+4. 跑起来检查，确认没问题再继续。
 
-该思想的核心是构建一个能够**自我优化**的 AI 系统。其递归本质可分解为以下步骤：
+一句话版本：
 
-> 延伸阅读：[A Formalization of Recursive Self-Optimizing Generative Systems](./i18n/zh/documents/Methodology%20and%20Principles/A%20Formalization%20of%20Recursive%20Self-Optimizing%20Generative%20Systems.md)
-
-#### 1. 定义核心角色：
-
-*   **α-提示词 (生成器)**: 一个“母体”提示词，其唯一职责是**生成**其他提示词或技能。
-*   **Ω-提示词 (优化器)**: 另一个“母体”提示词，其唯一职责是**优化**其他提示词或技能。
-
-#### 2. 描述递归的生命周期：
-
-1.  **创生 (Bootstrap)**:
-    *   使用 AI 生成 `α-提示词` 和 `Ω-提示词` 的初始版本 (v1)。
-
-2.  **自省与进化 (Self-Correction & Evolution)**:
-    *   使用 `Ω-提示词 (v1)` **优化** `α-提示词 (v1)`，从而得到一个更强大的 `α-提示词 (v2)`。
-
-3.  **创造 (Generation)**:
-    *   使用**进化后的** `α-提示词 (v2)` 生成所有需要的目标提示词和技能。
-
-4.  **循环与飞跃 (Recursive Loop)**:
-    *   将新生成的、更强大的产物（甚至包括新版本的 `Ω-提示词`）反馈给系统，再次用于优化 `α-提示词`，从而启动持续进化。
-
-#### 3. 终极目标：
-
-通过此持续的**递归优化循环**，系统在每次迭代中实现**自我超越**，无限逼近预设的**预期状态**。
-
-## 🧭 道
-
-* **凡是 ai 能做的，就不要人工做**
-* **一切问题问 ai**
-* **目的主导：开发过程中的一切动作围绕"目的"展开**
-* **上下文是 vibe coding 的第一性要素，垃圾进，垃圾出**
-* **系统性思考，实体，链接，功能/目的，三个维度**
-* **数据与函数即是编程的一切**
-* **输入，处理，输出刻画整个过程**
-* **多问 ai 是什么？，为什么？，怎么做？**
-* **先结构，后代码，一定要规划好框架，不然后面技术债还不完**
-* **奥卡姆剃刀定理，如无必要，勿增代码**
-* **帕累托法则，关注重要的那20%**
-* **逆向思考，先明确你的需求，从需求逆向构建代码**
-* **重复，多试几次，实在不行重新开个窗口，**
-* **专注，极致的专注可以击穿代码，一次只做一件事（神人除外）**
-
-
-## 🧩 法
-
-* **一句话目标 + 非目标**
-* **正交性，功能不要太重复了，（这个分场景）**
-* **能抄不写，不重复造轮子，先问 ai 有没有合适的仓库，下载下来改**
-* **一定要看官方文档，先把官方文档爬下来喂给 ai**
-* **按职责拆模块**
-* **接口先行，实现后补**
-* **一次只改一个模块**
-* **文档即上下文，不是事后补**
-
-## 🛠️ 术
-
-* 明确写清：**能改什么，不能改什么**
-* Debug 只给：**预期 vs 实际 + 最小复现**
-* 测试可交给 AI，**断言人审**
-* 代码一多就**切会话**
-
-## 📋 器
-
-### 集成开发环境 (IDE) & 终端
-
-*   [**Visual Studio Code**](https://code.visualstudio.com/): 一款功能强大的集成开发环境，适合代码阅读与手动修改。其 `Local History` 插件对项目版本管理尤为便捷。
-*   **虚拟环境 (.venv)**: 强烈推荐使用，可实现项目环境的一键配置与隔离，特别适用于 Python 开发。
-*   [**Cursor**](https://cursor.com/): 已经占领用户心智高地，人尽皆知。
-*   [**Warp**](https://www.warp.dev/): 集成 AI 功能的现代化终端，能有效提升命令行操作和错误排查的效率。
-*   [**Neovim (nvim)**](https://github.com/neovim/neovim): 一款高性能的现代化 Vim 编辑器，拥有丰富的插件生态，是键盘流开发者的首选。
-*   [**LazyVim**](https://github.com/LazyVim/LazyVim): 基于 Neovim 的配置框架，预置了 LSP、代码补全、调试等全套功能，实现了开箱即用与深度定制的平衡。
-
-### AI 模型 & 服务
-
-*   [**Claude Opus 4.5**](https://claude.ai/new): 性能强大的 AI 模型，通过 Claude Code 等平台提供服务，并支持 CLI 和 IDE 插件。
-*   [**gpt-5.1-codex.1-codex (xhigh)**](https://chatgpt.com/codex/): 适用于处理大型项目和复杂逻辑的 AI 模型，可通过 Codex CLI 等平台使用。
-*   [**Droid**](https://factory.ai/news/terminal-bench): 提供对 Claude Opus 4.5 等多种模型的 CLI 访问。
-*   [**Kiro**](https://kiro.dev/): 目前提供免费的 Claude Opus 4.5 模型访问，并提供客户端及 CLI 工具。
-*   [**Gemini CLI**](https://geminicli.com/): 提供对 Gemini 模型的免费访问，适合执行脚本、整理文档和探索思路。
-*   [**antigravity**](https://antigravity.google/): 目前由 Google 提供的免费 AI 服务，支持使用 Claude Opus 4.5 和 Gemini 3.0 Pro。
-*   [**AI Studio**](https://aistudio.google.com/prompts/new_chat): Google 提供的免费服务，支持使用 Gemini 3.0 Pro 和 Nano Banana。
-*   [**Gemini Enterprise**](https://cloud.google.com/gemini-enterprise): 面向企业用户的 Google AI 服务，目前可以免费使用。
-*   [**GitHub Copilot**](https://github.com/copilot): 由 GitHub 和 OpenAI 联合开发的 AI 代码补全工具。
-*   [**Kimi K2**](https://www.kimi.com/): 一款国产 AI 模型，适用于多种常规任务。
-*   [**GLM**](https://bigmodel.cn/): 由智谱 AI 开发的国产大语言模型。
-*   [**Qwen**](https://qwenlm.github.io/qwen-code-docs/zh/cli/): 由阿里巴巴开发的 AI 模型，其 CLI 工具提供免费使用额度。
-
-### 开发与辅助工具
-
-*   [**Augment**](https://app.augmentcode.com/): 提供强大的上下文引擎和提示词优化功能。
-*   [**Windsurf**](https://windsurf.com/): 为新用户提供免费额度的 AI 开发工具。
-*   [**Ollama**](https://ollama.com/): 本地大模型管理工具，可通过命令行方便地拉取和运行开源模型。
-*   [**Mermaid Chart**](https://www.mermaidchart.com/): 用于将文本描述转换为架构图、序列图等可视化图表。
-*   [**NotebookLM**](https://notebooklm.google.com/): 一款用于 AI 解读资料、音频和生成思维导图的工具。
-*   [**Zread**](https://zread.ai/): AI 驱动的 GitHub 仓库阅读工具，有助于快速理解项目代码。
-*   [**tmux**](https://github.com/tmux/tmux): 强大的终端复用工具，支持会话保持、分屏和后台任务，是服务器与多项目开发的理想选择。
-*   [**DBeaver**](https://dbeaver.io/): 一款通用数据库管理客户端，支持多种数据库，功能全面。
-
-### 资源与模板
-
-*   [**提示词库 (在线表格)**](https://docs.google.com/spreadsheets/d/1ngoQOhJqdguwNAilCl1joNwTje7FWWN9WiI2bo5VhpU/edit?gid=2093180351#gid=2093180351&range=A1): 一个包含大量可直接复制使用的各类提示词的在线表格。
-*   [**第三方系统提示词学习库**](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools): 用于学习和参考其他 AI 工具的系统提示词。
-*   [**Skills 制作器**](https://github.com/yusufkaraaslan/Skill_Seekers): 可根据需求生成定制化 Skills 的工具。
-*   [**元提示词**](https://docs.google.com/spreadsheets/d/1ngoQOhJqdguwNAilCl1joNwTje7FWWN9WiI2bo5VhpU/edit?gid=1770874220#gid=1770874220): 用于生成提示词的高级提示词。
-*   [**通用项目架构模板**](./i18n/zh/documents/Templates%20and%20Resources/通用项目架构模板.md): 可用于快速搭建标准化的项目目录结构。
-*   [**元技能：Skills 的 Skills**](./i18n/zh/skills/claude-skills/SKILL.md): 用于生成 Skills 的元技能。
-*   [**tmux快捷键大全**](./i18n/zh/documents/Tutorials%20and%20Guides/tmux快捷键大全.md): tmux 的快捷键参考文档。
-*   [**LazyVim快捷键大全**](./i18n/zh/documents/Tutorials%20and%20Guides/LazyVim快捷键大全.md): LazyVim 的快捷键参考文档。
-*   [**二哥的Java进阶之路**](https://javabetter.cn/): 包含多种开发工具的详细配置教程。
-*   [**虚拟卡**](https://www.bybit.com/cards/?ref=YDGAVPN&source=applet_invite): 可用于注册云服务等需要国际支付的场景。
+> 你负责方向、判断和验收；AI 负责生成、修改和解释。
 
 ---
 
-## 编码模型性能分级参考
+## 什么是 Vibe Coding
 
-建议只选择第一梯队模型处理复杂任务，以确保最佳效果与效率。
+简单来说：
 
-*   **第一梯队**: `codex-5.1-max-xhigh`, `claude-opus-4.5-xhigh`, `gpt-5.2-xhigh`
-*   **第二梯队**: `claude-sonnet-4.5`, `kimi-k2-thinking`, `minimax-m2`, `glm-4.6`, `gemini-3.0-pro`, `gemini-2.5-pro`
-*   **第三梯队**: `qwen3`, `SWE`, `grok4`
+> 你说清楚想要什么，AI 先写出来，你来检查和调整。
 
----
+人负责：
 
-## 📚 相关文档与资源
+- 提目标
+- 看结果
+- 做决定
 
-*   **交流社区**:
-    *   [Telegram 交流群](https://t.me/glue_coding)
-    *   [Telegram 频道](https://t.me/tradecat_ai_channel)
-*   **个人分享**:
-    *   [我的学习经验](./i18n/zh/documents/Methodology%20and%20Principles/学习经验.md)
-    *   [编程书籍推荐](./i18n/zh/documents/Templates%20and%20Resources/编程书籍推荐.md)
-*   **核心资源**:
-    *   [**元提示词库**](https://docs.google.com/spreadsheets/d/1ngoQOhJqdguwNAilCl1joNwTje7FWWN9WiI2bo5VhpU/edit?gid=1770874220#gid=1770874220): 用于生成提示词的高级提示词集合。
-    *   [**元技能 (Meta-Skill)**](./i18n/zh/skills/claude-skills/SKILL.md): 用于生成 Skills 的 Skill。
-    *   [**技能库 (Skills)**](./i18n/zh/skills): 可直接集成的模块化技能仓库。
-    *   [**技能生成器**](https://github.com/yusufkaraaslan/Skill_Seekers): 将任何资料转化为 Agent 可用技能的工具。
-    *   [**在线提示词数据库**](https://docs.google.com/spreadsheets/d/1ngoQOhJqdguwNAilCl1joNwTje7FWWN9WiI2bo5VhpU/edit?gid=2093180351#gid=2093180351&range=A1): 包含数百个适用于各场景的用户及系统提示词的在线表格。
-    *   [**第三方系统提示词仓库**](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools): 汇集了多种 AI 工具的系统提示词。
-*   **项目内部文档**:
-    *   [**prompts-library 工具说明**](./libs/external/prompts-library/): 该工具支持在 Excel 和 Markdown 格式之间转换提示词，并包含数百个精选提示词。
-    *   [**coding_prompts 集合**](./i18n/zh/prompts/coding_prompts/): 适用于 Vibe Coding 流程的专用提示词。
-    *   [**系统提示词构建原则**](./i18n/zh/documents/Methodology%20and%20Principles/系统提示词构建原则.md): 关于如何构建高效、可靠的 AI 系统提示词的综合指南。
-    *   [**开发经验总结**](./i18n/zh/documents/Methodology%20and%20Principles/开发经验.md): 包含变量命名、文件结构、编码规范、架构原则等实践经验。
-    *   [**通用项目架构模板**](./i18n/zh/documents/Templates%20and%20Resources/通用项目架构模板.md): 提供多种项目类型的标准目录结构与最佳实践。
-    *   [**Augment MCP 配置文档**](./i18n/zh/documents/Tutorials%20and%20Guides/auggie-mcp配置文档.md): Augment 上下文引擎的详细配置说明。
-    *   [**system_prompts 集合**](./i18n/zh/prompts/system_prompts/): 用于指导 AI 开发的系统提示词，包含多个版本的开发规范与思维框架。
+AI 负责：
+
+- 写草稿
+- 补代码
+- 解释原因
+
+软件就是这样从一句话，慢慢变成一个能跑的东西。
+
+但注意，Vibe Coding 不是“躺着等 AI 交付”。
+
+更准确的说法是：
+
+> 像产品经理一样说需求，像测试一样验结果。
 
 ---
 
-### 项目目录结构概览
+## 不是纯 Vibe，而是人机协同
 
-本项目 `vibe-coding-cn` 的核心结构主要围绕知识管理、AI 提示词的组织与自动化展开。以下是经过整理和简化的目录树及各部分说明：
+大家习惯叫它 Vibe Coding，也有人强调是 Human-Agent Engineering：人类与 AI Agent 协同工程。
 
-```
-.
-├── CODE_OF_CONDUCT.md           # 社区行为准则，规范贡献者行为。
-├── CONTRIBUTING.md              # 贡献指南，说明如何为本项目做出贡献。
-├── GEMINI.md                    # AI 助手的上下文文档，包含项目概述、技术栈和文件结构。
-├── LICENSE                      # 开源许可证文件。
-├── Makefile                     # 项目自动化脚本，用于代码检查、构建等。
-├── README.md                    # 项目主文档，包含项目概览、使用指南、资源链接等。
-├── .gitignore                   # Git 忽略文件。
-├── AGENTS.md                    # AI 代理相关的文档或配置。
-├── CLAUDE.md                    # AI 助手的核心行为准则或配置。
-│
-├── i18n/zh/documents/           # 存放各类说明文档、经验总结和配置详细说明。
-│   ├── Methodology and Principles/ # 方法论与原则
-│   ├── Templates and Resources/    # 模板与资源
-│   └── Tutorials and Guides/       # 教程与指南
-│
-├── libs/                        # 通用库代码，用于项目内部模块化。
-│   ├── common/                  # 通用功能模块。
-│   │   ├── models/              # 模型定义。
-│   │   │   └── __init__.py
-│   │   └── utils/               # 工具函数。
-│   │       └── backups/         # 内部备份工具。
-│   ├── database/                # 数据库相关模块。
-│   │   └── .gitkeep             # 占位文件，确保目录被 Git 跟踪。
-│   └── external/                # 外部集成模块。
-│       ├── my-nvim/             # 用户的 Neovim 配置。
-│       ├── prompts-library/     # 提示词库管理工具（Excel-Markdown 转换）。
-│       │   ├── main.py          # 提示词库管理工具主入口。
-│       │   ├── scripts/         # 包含 Excel 与 Markdown 互转脚本和配置。
-│       │   ├── prompt_excel/    # 存放 Excel 格式的原始提示词数据。
-│       │   ├── prompt_docs/     # 存放从 Excel 转换而来的 Markdown 提示词文档。
-│       │   └── ... (其他 prompts-library 内部文件)
-│       └── XHS-image-to-PDF-conversion/ # 小红书图片转PDF工具。
-│
-├── i18n/zh/prompts/             # 集中存放所有类型的 AI 提示词。
-│   ├── assistant_prompts/       # 辅助类提示词。
-│   ├── coding_prompts/          # 专门用于编程和代码生成相关的提示词集合。
-│   │   └── ... (具体编程提示词文件)
-│   │
-│   ├── system_prompts/          # AI 系统级提示词，用于设定 AI 行为和框架。
-│   │   └── ... (其他系统提示词)
-│   │
-│   └── user_prompts/            # 用户自定义或常用提示词。
-│       ├── ASCII图生成.md         # ASCII 艺术图生成提示词。
-│       ├── 数据管道.md            # 数据管道处理提示词。
-│       └── ... (其他用户提示词)
-│
-├── i18n/zh/skills/              # 集中存放所有类型的 skills 技能。
-    ├── claude-skills            # 生成 SKILL 的元 SKILL
-    │   ├── SKILL.md
-    │   └── ... (其他)
-    └── ... (与其他 skill)
-```
+意思是：AI 不是替你负责的外包团队，而是一个很快、很勤奋、但需要你管理的实习生。其实 AI 写出来的代码质量上限，取决于你的需求能力、结构能力、判断能力和验收能力。
+
+如果 AI 表现不好，很多时候不是模型太差，而是：
+
+- 你的需求没说清楚
+- 项目结构太乱
+- 上下文给得不够
+- 没有测试和验收标准
+- 你没有认真检查 AI 写出来的东西
+
+所以真正可靠的 AI 编程不是“随便说一句，让 AI 全权负责”，而是：
+
+> 人负责规划、上下文、判断和验收；AI 负责加速实现。
 
 ---
 
-## 🖼️ 概览与演示
+## 最短路径
 
-一句话：Vibe Coding = **规划驱动 + 上下文固定 + AI 结对执行**，让「从想法到可维护代码」变成一条可审计的流水线，而不是一团无法迭代的巨石文件。
+如果你只想先做出第一个能打开的 imToken 钱包 Demo，不要先学一堆工具。
 
-**你能得到**
-- 成体系的提示词工具链：`i18n/zh/prompts/system_prompts/` 约束 AI 行为边界，`i18n/zh/prompts/coding_prompts/` 提供需求澄清、计划、执行的全链路脚本。
-- 闭环交付路径：需求 → 上下文文档 → 实施计划 → 分步实现 → 自测 → 进度记录，全程可复盘、可移交。
+先准备这 4 个就够了：
 
-## ⚙️ 架构与工作流程
+| 工具 | 用来做什么 | 小白理解 |
+| --- | --- | --- |
+| [Cursor](https://cursor.com/) | 写代码、改代码、和 AI 对话 | 你的 AI 编程工作台 |
+| [GitHub](https://github.com/) | 保存代码、备份版本、方便回滚 | 代码网盘 + 历史记录，也可以直接用 GitHub Pages 部署网站 |
+| [Vercel](https://vercel.com/) | 把网页钱包 Demo 部署到网上 | 一键生成公开访问链接 |
+| AI 模型 | 真正帮你思考和写代码 | 软件大脑 |
 
-核心资产映射：
+第一阶段不要追求工具最全，只追求流程跑通：
+
+> Cursor 做钱包 Demo → GitHub 保存 → Github Page 部署 → 链接发给别人看。
+
+---
+
+## 工具有哪些
+
+### 小白必备
+
+- [Cursor](https://cursor.com/)：推荐小白的第一站。类似的产品 VS Code，Antigravity，可以看项目、改文件、执行命令。
+- [GitHub](https://github.com/)：每完成一步就保存一次。项目坏了，可以回到之前的版本。
+- [GitHub CLI](https://docs.github.com/zh/github-cli/github-cli/quickstart)：命令叫 `gh`，可以在终端登录 GitHub、创建仓库和提交 PR。
+- [Vercel](https://vercel.com/)：适合部署网页钱包 Demo、前端应用和简单全栈应用。把项目连上 GitHub 后，可以自动生成访问链接。
+
+### AI 模型推荐
+
+| 场景 | 推荐 |
+| --- | --- |
+| 复杂项目、长任务、重构 | Claude Opus 4.7、GPT-5.5、GPT-5.2-Codex |
+| Cursor 内优先尝试 | Claude Opus 4.7、GPT-5.5、Composer 2 |
+| 国内或低成本备选 | GLM-5.1、Kimi K2.6、DeepSeek V4-Pro / V4-Flash、MiniMax M2.5、Qwen 3.6 Plus |
+| Google 路线 | Gemini 3.1 Pro Preview |
+
+### 进阶工具
+
+等你跑通第一个项目，再看这些：
+
+- Claude Code：适合复杂项目、终端工作流、代码库级修改。
+- Codex CLI / ChatGPT Codex：适合大型代码任务、代码审查、自动化开发。
+- GitHub Copilot：适合已经在 GitHub 和 IDE 中工作的开发者。
+- Bolt / Lovable / v0：适合快速生成网页钱包界面或应用原型。
+- Semgrep：扫描安全问题和明显代码风险。
+- Playwright：让 AI 自动打开浏览器、点击页面、检查功能是否符合预期。
+- Graphite / CodeRabbit / Qodo：辅助代码评审。
+- MCP / SubAgent：让 AI 连接外部工具，或拆成多个角色协作。
+
+---
+
+## 提示词如何写
+
+AI 不怕你说得多，怕你说得含糊。
+
+### 1. 说清楚输入和输出
+
+不要只说：
+
+```text
+帮我做一个钱包功能。
 ```
-i18n/zh/prompts/
-  coding_prompts/        # 需求澄清、计划、执行链的核心提示词
-  system_prompts/        # 约束 AI 行为边界的系统级提示词
-  assistant_prompts/     # 辅助/配合型提示
-  user_prompts/          # 可复用的用户侧提示词
-i18n/zh/documents/
-  Templates and Resources/代码组织.md, Templates and Resources/通用项目架构模板.md, Methodology and Principles/开发经验.md, Methodology and Principles/系统提示词构建原则.md 等知识库
-backups/
-  一键备份.sh, 快速备份.py  # 本地/远端快照脚本
+
+更好的说法：
+
+```text
+用户点击“创建钱包”后：
+1. 系统创建 Ethereum、BSC、Bitcoin、Solana、TRON 五条主网地址。
+2. 创建成功后，显示五条链地址和复制按钮。
+3. 如果当前浏览器不支持 Passkey，显示“当前浏览器暂不支持 Passkey，请换 Chrome 或 Safari 再试”。
+4. 允许用户主动备份助记词，但必须显示离线保存、不要截图、不要上传、不要发给 AI 的安全提示。
+5. 暂时不做余额查询、转账、广播和资产管理。
+先不要写代码，先告诉我你理解的流程和需要改哪些文件。
 ```
 
-```mermaid
-graph TB
-  %% GitHub 兼容简化版（仅使用基础语法）
+你要尽量说清楚：
 
-  subgraph ext_layer[外部系统与数据源层]
-    ext_contrib[社区贡献者]
-    ext_sheet[Google 表格 / 外部表格]
-    ext_md[外部 Markdown 提示词]
-    ext_api[预留：其他数据源 / API]
-    ext_contrib --> ext_sheet
-    ext_contrib --> ext_md
-    ext_api --> ext_sheet
-  end
+- 用户做了什么
+- 系统应该返回什么
+- 出错时怎么办
+- 哪些功能暂时不要做
 
-  subgraph ingest_layer[数据接入与采集层]
-    excel_raw[prompt_excel/*.xlsx]
-    md_raw[prompt_docs/外部MD输入]
-    excel_to_docs[prompts-library/scripts/excel_to_docs.py]
-    docs_to_excel[prompts-library/scripts/docs_to_excel.py]
-    ingest_bus[标准化数据帧]
-    ext_sheet --> excel_raw
-    ext_md --> md_raw
-    excel_raw --> excel_to_docs
-    md_raw --> docs_to_excel
-    excel_to_docs --> ingest_bus
-    docs_to_excel --> ingest_bus
-  end
+### 2. 给参考案例和上下文
 
-  subgraph core_layer[数据处理与智能决策层 / 核心]
-    ingest_bus --> validate[字段校验与规范化]
-    validate --> transform[格式映射转换]
-    transform --> artifacts_md[prompt_docs/规范MD]
-    transform --> artifacts_xlsx[prompt_excel/导出XLSX]
-    orchestrator[main.py · scripts/start_convert.py] --> validate
-    orchestrator --> transform
-  end
+不要只说：
 
-  subgraph consume_layer[执行与消费层]
-    artifacts_md --> catalog_coding[i18n/zh/prompts/coding_prompts]
-    artifacts_md --> catalog_system[i18n/zh/prompts/system_prompts]
-    artifacts_md --> catalog_assist[i18n/zh/prompts/assistant_prompts]
-    artifacts_md --> catalog_user[i18n/zh/prompts/user_prompts]
-    artifacts_md --> docs_repo[i18n/zh/documents/*]
-    artifacts_md --> new_consumer[预留：其他下游渠道]
-    catalog_coding --> ai_flow[AI 结对编程流程]
-    ai_flow --> deliverables[项目上下文 / 计划 / 代码产出]
-  end
+```text
+钱包首页做得好看一点。
+```
 
-  subgraph ux_layer[用户交互与接口层]
-    cli[CLI: python main.py] --> orchestrator
-    makefile[Makefile 任务封装] --> cli
-    readme[README.md 使用指南] --> cli
-  end
+更好的说法：
 
-  subgraph infra_layer[基础设施与横切能力层]
-    git[Git 版本控制] --> orchestrator
-    backups[backups/一键备份.sh · backups/快速备份.py] --> artifacts_md
-    deps[requirements.txt · scripts/requirements.txt] --> orchestrator
-    config[prompts-library/scripts/config.yaml] --> orchestrator
-    monitor[预留：日志与监控] --> orchestrator
-  end
+```text
+我希望 imToken 钱包 Demo 页面干净、可信、不要像游戏或营销页。
+布局参考 imToken 官网和常见钱包首页：顶部显示产品名，中间显示 Demo 钱包状态，下面显示五条链地址、复制按钮和助记词备份入口。
+主色用黑白灰，关键按钮用蓝色，危险动作用红色。
+我会给你截图或链接，你先总结风格，再写实现方案。
+```
+
+可以给 AI 的参考包括：
+
+- 截图
+- 链接
+- 竞品页面
+- 你喜欢的颜色和排版
+- 你不想要的风格
+
+### 3. 分步骤迭代
+
+不要一次性提十个需求。
+
+正确节奏是：
+
+1. 先做核心功能。
+2. 跑起来。
+3. 检查结果。
+4. 保存版本。
+5. 再加下一个细节。
+
+一句话：
+
+> 每次只改一个点，改完验证，再做下一步。
+
+---
+
+## 方法论
+
+### 40 / 20 / 40
+
+AI 编程时代，写代码本身反而不是最重要的部分。
+
+一个很实用的时间分配是：
+
+| 阶段 | 比例 | 你要做什么 |
+| --- | --- | --- |
+| Planning | 40% | 想清楚目标、边界、页面、数据、验收标准 |
+| Coding | 20% | 让 AI 按计划写代码 |
+| Testing | 40% | 运行、检查、修 bug、Review、确认能交付 |
+
+也就是说：
+
+> 前面想清楚，后面验明白，中间让 AI 加速。
+
+### 核心开发循环
+
+每次做功能，都按这个循环走：
+
+1. **Research 调研**：让 AI 先阅读项目、理解背景、查官方文档。
+2. **Plan 规划**：让 AI 先给方案和步骤，你确认后再执行。
+3. **Implement 实现**：一次只做一个小功能。
+4. **Test 测试**：跑起来，看有没有报错，检查是否符合预期。
+5. **Review 评审**：看页面、看代码、看边界情况，再决定是否进入下一步。
+
+关键提示词：
+
+```text
+先不要写代码。请先阅读项目结构，说明你理解了什么，再给出实现计划。
+计划必须分成小步骤，每一步都要有验证方式。等我确认后，你再执行第一步。
 ```
 
 ---
 
-<details>
-<summary>📈 性能基准 (可选)</summary>
+## 如何一步一步开始
 
-本仓库定位为「流程与提示词」而非性能型代码库，建议跟踪下列可观测指标（当前主要依赖人工记录，可在 `progress.md` 中打分/留痕）：
+这一节只保留两个可以跟做的 Demo，不讲大段概念。
 
-| 指标 | 含义 | 当前状态/建议 |
-|:---|:---|:---|
-| 提示命中率 | 一次生成即满足验收的比例 | 待记录；每个任务完成后在 progress.md 记 0/1 |
-| 周转时间 | 需求 → 首个可运行版本所需时间 | 录屏时标注时间戳，或用 CLI 定时器统计 |
-| 变更可复盘度 | 是否同步更新上下文/进度/备份 | 通过手工更新；可在 backups 脚本中加入 git tag/快照 |
-| 例程覆盖 | 是否有最小可运行示例/测试 | 建议每个示例项目保留 README+测试用例 |
+1. **Demo 1**：基于 Token Core WASM 做 Passkey 多链地址 Demo。
+2. **Demo 2**：基于 Token Core CLI Demo 做一个给 AI 用的钱包 Skill。
 
-</details>
+### Demo 1：基于 Token Core WASM 做 Passkey 多链地址 Demo
 
----
+你可以把每一步里的提示词复制给 AI，让 AI 带你做。每一步完成后先测试，再保存一个本地 Git 版本。
 
-## 🗺️ 路线图
+已经有一个可参考的 Demo：
 
-```mermaid
-gantt
-    title 项目发展路线图
-    dateFormat YYYY-MM
-    section 近期 (2025)
-    补全演示GIF与示例项目: active, 2025-12, 15d
-    prompts 索引自动生成脚本: 2025-12, 10d
-    section 中期 (2026 Q1)
-    一键演示/验证 CLI 工作流: 2026-01, 15d
-    备份脚本增加快照与校验: 2026-01, 10d
-    section 远期 (2026 Q1-Q2)
-    模板化示例项目集: 2026-02, 20d
-    多模型对比与评估基线: 2026-02, 20d
+- GitHub 仓库：[makoshan/MyWallet](https://github.com/makoshan/MyWallet)
+- 在线预览：[Passkey 多链钱包 Demo](https://makoshan.github.io/MyWallet/)
+
+这个 Demo 适合用来学习：
+
+- 如何把一个钱包想法拆成项目文档、设计规范、实施计划和验收清单。
+- 如何用 Passkey 做创建 / 解锁入口。
+- 如何展示 Ethereum、BSC、Bitcoin、Solana、TRON 多链地址。
+- 如何做 Receive 收款页，按链展示地址和二维码。
+- 如何做 Settings 页面，并在导出助记词前要求用户再次确认安全风险。
+- 如何用 GitHub Pages 部署一个前端 Demo。
+
+它不是正式钱包产品，学习时要记住：
+
+- 不要直接存入大额真实资产。
+- 不要把助记词、私钥、正式 API Key 写进代码、日志、截图或 GitHub。
+- 前端公开网页里的内容要默认视为所有人都能看到。
+- 后续如果加入签名和广播，必须先显示人能看懂的交易摘要，并要求用户二次确认。
+
+如果你想让 AI 先读这个 Demo，可以复制这段：
+
+```text
+请阅读这个 Demo 仓库：
+https://github.com/makoshan/MyWallet
+
+在线预览：
+https://makoshan.github.io/MyWallet/
+
+请先不要写代码。
+请用小白能懂的话总结：
+1. 这个 Demo 已经实现了哪些页面。
+2. 它支持哪些链。
+3. 它的 Passkey、收款页、设置页分别在做什么。
+4. 它还不是正式钱包产品的原因。
+5. 如果我要从零复刻一个类似 Demo，应该先做哪 5 个小步骤。
+```
+
+真实开发不是直线。你一开始可能会想做完整钱包：多链、余额、收款、转账、广播、邮箱登录、资产管理全都要。
+
+但如果时间有限，第一版最好先收窄成一个能验证核心能力的小 Demo：
+
+> 创建 Ethereum、BSC、Bitcoin、Solana、TRON 五条主网地址，展示地址，并完成助记词备份。
+
+暂时不要做：
+
+- 余额查询
+- 转账和广播
+- 交易记录
+- 邮箱登录
+- Portfolio 资产管理
+- 代币资产，例如 ERC20、TRC20、SPL Token
+
+#### 第 0 步：准备工具
+
+你需要：
+
+- 安装 Cursor
+- 注册 GitHub
+- 安装 Git
+- 安装 GitHub CLI，命令叫 `gh`
+- 注册 Vercel
+- 准备一个可用 AI 模型
+
+如果你不会安装，可以直接问 AI：
+
+```text
+我不会编程。请一步一步带我准备开发环境，用来做一个 PC 网页钱包 Demo。
+
+我需要：
+1. 安装 Cursor。
+2. 注册 GitHub。
+3. 安装 Git。
+4. 安装 GitHub CLI，命令叫 gh。
+5. 注册 Vercel 或确认我可以用 GitHub Pages 部署。
+
+请每一步都告诉我：
+1. 去哪里下载或注册。
+2. 需要点击什么。
+3. 完成后如何验证。
+4. 如果失败，我应该复制哪段错误给你。
+
+先不要写代码。
+```
+
+#### 第 1 步：写一句话目标
+
+先不要想技术，先写人话。
+
+示例：
+
+```text
+我要做一个个人自用的 PC 网页钱包 Demo。
+
+目标：
+1. 基于 imToken 开源的 Token Core WASM：
+   https://github.com/consenlabs/token-core-monorepo/tree/tenth-anniversary/token-core/tcx-wasm
+2. UI 参考 imToken token-ui：
+   https://github.com/consenlabs/token-ui
+3. 用户可以用 Passkey 创建和解锁钱包。
+4. 第一版支持五条主网地址：
+   - Ethereum
+   - BSC
+   - Bitcoin
+   - Solana
+   - TRON
+5. Solana 如果 Token Core WASM 不直接支持，请用 Solana 专用库自己扩展地址派生。
+6. 用户可以主动导出助记词备份。
+7. 导出助记词前必须用 Passkey 解锁，并显示安全提醒。
+
+暂时不做：
+1. Swap。
+2. 跨链。
+3. 法币入金。
+4. 邮箱登录。
+5. 复杂交易记录。
+6. 后台托管私钥。
+7. 自动上传助记词备份。
+8. 未经二次确认的自动广播交易。
+
+请先不要写代码。
+请先复述你理解的项目目标、UI 参考、暂时不做的功能、主要页面和安全边界。
+```
+
+#### 第 2 步：让 AI 先问你问题
+
+把一句话目标发给 AI，然后让它反问你。
+
+```text
+我不会编程。请你像产品经理一样，围绕这个钱包 Demo 问我 10 个问题，帮我把需求整理清楚。
+先只问问题，不要写代码。
+```
+
+回答完问题后，再让 AI 整理：
+
+```text
+请根据我的回答，整理一份清晰的项目说明。
+要求包含：目标用户、核心功能、暂时不做的功能、页面结构、钱包安全边界、验收标准。
+```
+
+如果你说“实现所有功能”，要让 AI 帮你翻译成可落地范围。真实项目里，“所有功能”通常只是愿望，不是实施计划。
+
+#### 第 3 步：生成项目文档
+
+让 AI 生成 5 个文件内容：
+
+| 文件 | 用途 |
+| --- | --- |
+| `project-brief.md` | 项目说明：钱包 Demo 做什么、给谁用、解决什么问题 |
+| `tech-stack.md` | 技术方案：Token Core WASM、Passkey、前端框架怎么选 |
+| `design.md` | 设计规范：页面结构、视觉风格、组件规则、交互状态 |
+| `implementation-plan.md` | 实施计划：一步一步做 |
+| `review-checklist.md` | 验收清单：怎么判断钱包流程做对了 |
+
+可复制提示词：
+
+```text
+请把这个项目整理成 5 份 Markdown 文档：
+1. project-brief.md：项目目标、用户、核心功能、非目标。
+2. tech-stack.md：推荐最简单稳定的技术栈，并解释为什么适合 imToken Token Core WASM 和 Passkey Demo。
+3. design.md：设计规范，UI 参考 imToken token-ui，包含页面结构、视觉风格、组件规则、交互状态和安全提示文案。
+4. implementation-plan.md：分步骤实施计划，每一步只做一个小功能。
+5. review-checklist.md：验收清单，包含功能、页面、错误处理、钱包安全和部署检查。
+
+要求：
+1. 面向不会编程的人。
+2. 语言要简单。
+3. 不要直接写代码。
+4. implementation-plan.md 必须一步一步推进，每一步都要有验收方式。
+5. 安全要求必须明确写入文档：助记词和私钥不能上传服务器，不能提交 GitHub，不能出现在日志、截图、控制台。
+6. design.md 必须参考这个 UI 项目总结风格，但不要直接照搬无关组件：
+   https://github.com/consenlabs/token-ui
+```
+
+#### 第 4 步：只做最小版本
+
+第一次不要做大而全。
+
+最小版本只需要：
+
+- 能打开页面
+- 能看到“个人 Demo，先小额验证，不要直接存入大额资产”的安全提示
+- 能完成一个最主要的动作，例如创建钱包并展示 ETH 地址
+- 没有明显报错
+
+可复制提示词：
+
+```text
+请阅读 project-brief.md、tech-stack.md、design.md、implementation-plan.md 和 review-checklist.md。
+现在只执行 implementation-plan.md 的第 1 步，做最小可用版本。
+完成后停下来，不要继续第 2 步。
+请告诉我你改了哪些文件，以及我如何验证。
+```
+
+#### 第 5 步：本地运行和测试
+
+如果你不会运行项目，让 AI 教你。
+
+```text
+我不会运行项目。请一步一步告诉我在 Cursor 里怎么启动。
+每一步都写清楚我要输入什么命令、在哪里输入、成功后应该看到什么。
+如果报错，请告诉我应该复制哪一段错误给你。
+```
+
+每完成一个小功能，都让 AI 测试一次：
+
+```text
+请测试刚才完成的功能。
+
+要求：
+1. 先说明你准备用什么方式测试。
+2. 如果需要启动本地服务，请告诉我命令和访问地址。
+3. 如果可以自动化测试，请用 Playwright 或浏览器打开页面检查。
+4. 如果测试失败，请先解释失败原因，再修复。
+5. 修复后重新测试。
+6. 测试通过后，告诉我结果和剩余风险。
+
+注意：
+不要只说“应该可以”，必须给出实际测试结果。
+```
+
+验证时不要只看“AI 说完成了”，你要自己打开页面。
+
+提示：安装 Playwright 后，可以让 AI 自动化打开浏览器、点击按钮、填写输入框，并检查页面功能是否符合预期。
+
+检查：
+
+- 页面能不能打开
+- “个人 Demo，先小额验证，不要直接存入大额资产”提示是否明显
+- 创建钱包按钮能不能点
+- Ethereum、BSC、Bitcoin、Solana、TRON 五条地址是否展示
+- 复制地址按钮是否可用
+- 助记词备份流程是否有明确安全提示
+- 报错提示是否能看懂
+- 刷新后是否还正常
+- 控制台、日志、截图或 Git 仓库里有没有出现助记词、私钥等敏感信息
+
+#### 第 6 步：保存版本
+
+每完成一个小版本，都建议保存一次。最推荐的节奏是先保存到本地 Git；不需要每次都提交到 GitHub。
+GitHub 更适合在一个阶段稳定后再推送，用来备份、部署和分享。
+
+如果你想在终端里操作 GitHub，需要先准备 3 件事：
+
+1. 注册 GitHub 账号。
+2. 安装 Git，它负责本地版本管理。
+3. 安装 GitHub CLI，它的命令叫 `gh`，负责在终端里登录 GitHub、创建仓库和推送代码。
+
+最简单的用法：
+
+```bash
+# macOS，如果已经安装 Homebrew
+brew install git gh
+
+# 检查 Git 是否安装成功
+git --version
+
+# 登录 GitHub
+gh auth login
+
+# 检查是否登录成功
+gh status
+```
+
+Windows 或 Linux 用户可以按 GitHub 官方文档安装：
+
+- [Git 安装说明](https://git-scm.com/downloads)
+- [GitHub CLI 快速入门](https://docs.github.com/zh/github-cli/github-cli/quickstart)
+
+可复制提示词：
+
+```text
+现在这个小版本已经测试通过。
+请帮我保存一个本地 Git 版本。
+
+要求：
+1. 先检查 git status。
+2. 总结本次改了哪些文件。
+3. 确认没有助记词、私钥、API Key、临时截图或构建产物被提交。
+4. 使用清楚的 commit message。
+5. 只提交和本步骤有关的文件。
+6. 不需要每次都推送到 GitHub，除非我明确要求。
+```
+
+你要养成这个习惯：
+
+> 一个小功能完成并验证后，先保存一个本地 Git 版本；阶段稳定后，再推送到 GitHub。
+
+#### 第 7 步：继续下一步，但一次只做一个功能
+
+后续迭代时，不要说“帮我优化整个钱包”。
+
+可复制提示词：
+
+```text
+我已经验证当前版本可以用。
+请继续 implementation-plan.md 的下一步。
+
+要求：
+1. 只做下一步。
+2. 不要顺手做后面的功能。
+3. 完成后先测试。
+4. 测试通过后告诉我如何验证。
+5. 等我确认后，再保存本地 Git 版本。
+```
+
+常见迭代顺序：
+
+1. 创建基础页面。
+2. 创建 Passkey 钱包入口。
+3. 接入 `@consenlabs/tcx-wasm`。
+4. 生成 Ethereum 地址。
+5. 生成 BSC、Bitcoin、TRON 地址。
+6. 用 Solana 专用库扩展 Solana 地址。
+7. 做 Receive 页面，支持下拉切换五条链地址和二维码。
+8. 做 Settings 页面，支持 Passkey 解锁后导出助记词。
+9. 做部署检查。
+
+#### 第 8 步：阶段稳定后再推送 GitHub 和部署
+
+项目能本地运行后，再部署出去。
+
+可复制提示词：
+
+```text
+当前阶段已经本地测试通过。
+现在请帮我准备推送到 GitHub 并部署。
+
+要求：
+1. 先检查 git status 和最近 commit。
+2. 确认没有助记词、私钥、API Key。
+3. 如果有 .env 文件，确认它没有被提交。
+4. 如果使用 GitHub Pages，请检查构建配置和 base path。
+5. 如果使用 Vercel，请检查构建命令、输出目录和环境变量。
+6. 如果存在 VITE_* 环境变量，请判断它们是否会暴露到浏览器，不能放任何正式 API Key、助记词或私钥。
+7. 推送前先告诉我将执行哪些命令。
+8. 部署完成后，告诉我公开访问链接和验证步骤。
+```
+
+部署完成后，检查：
+
+- 公开链接能不能打开
+- 手机能不能打开
+- 页面刷新是否正常
+- 控制台有没有明显报错
+- GitHub 更新后 Vercel 是否自动重新部署
+- 公开页面和构建产物里有没有出现助记词、私钥、正式 API Key
+
+钱包项目每次都要附带这段安全提示词：
+
+```text
+这是个人钱包 Demo，不要直接存入大额真实资产。
+
+安全要求：
+1. 不要把助记词、私钥、Passkey PRF key 打印到页面、控制台或日志。
+2. 不要把助记词保存到服务器。
+3. 不要把正式 RPC API Key 写进前端代码或 GitHub Pages 构建产物。
+4. 导出助记词时必须提示用户手抄离线保存，不要截图，不要上传，不要发给 AI。
+5. 如果后续加入签名和广播，必须先显示人能看懂的交易摘要，并要求用户二次确认。
+6. 每次提交前都检查是否误提交了敏感信息。
 ```
 
 ---
 
-## 🚀 入门指南（这里是原作者的，不是我写的，我更新了一下我认为最好的模型）
-要开始 Vibe Coding，你只需要以下两种工具之一：
-- **Claude Opus 4.5**，在 Claude Code 中使用
-- **gpt-5.1-codex.1-codex (xhigh)**，在 Codex CLI 中使用
+### Demo 2：基于 Token Core CLI Demo 做 AI Skill
 
-本指南同时适用于 CLI 终端版本和 VSCode 扩展版本（Codex 和 Claude Code 都有扩展，且界面更新）。
+参考项目：
 
-*(注：本指南早期版本使用的是 **Grok 3**，后来切换到 **Gemini 2.5 Pro**，现在我们使用的是 **Claude 4.5**（或 **gpt-5.1-codex.1-codex (xhigh)**）)*
+- [Token Core CLI Demo](https://github.com/consenlabs/token-core-monorepo/tree/demo/token-core-cli/token-core/tcx-examples/cli)
 
-*(注2：如果你想使用 Cursor，请查看本指南的 [1.1 版本](https://github.com/EnzeD/vibe-coding/tree/1.1.1)，但我们认为它目前不如 Codex CLI 或 Claude Code 强大)*
+这个 Demo 的目标不是再做一个网页钱包，而是做一个给 AI 用的 Skill。以后你让 AI 做钱包、签名、交易分析、广播相关功能时，它会先按这个 Skill 的规则工作。
 
----
+#### 第 0 步：让 AI 阅读 CLI Demo
 
-<details>
-<summary><strong>⚙️ 完整设置流程</strong></summary>
+```text
+请阅读这个 Token Core CLI Demo：
+https://github.com/consenlabs/token-core-monorepo/tree/demo/token-core-cli/token-core/tcx-examples/cli
 
-<details>
-<summary><strong>1. 游戏设计文档（Game Design Document）</strong></summary>
+目标：
+我要基于它做一个给 AI 用的钱包 Skill。
 
-- 把你的游戏创意交给 **gpt-5.1-codex** 或 **Claude Opus 4.5**，让它生成一份简洁的 **游戏设计文档**，格式为 Markdown，文件名为 `game-design-document.md`。
-- 自己审阅并完善，确保与你的愿景一致。初期可以很简陋，目标是给 AI 提供游戏结构和意图的上下文。不要过度设计，后续会迭代。
-</details>
+请先不要写代码。
+请先总结这个 CLI Demo 里有哪些能力，例如：
+1. 创建钱包。
+2. 导入钱包。
+3. 列出钱包。
+4. 分析交易请求或 signed raw tx。
+5. 签名交易。
+6. 广播交易。
+7. policy 预检查。
+8. Tenderly 模拟。
+9. AI 交易摘要。
 
-<details>
-<summary><strong>2. 技术栈与 <code>CLAUDE.md</code> / <code>Agents.md</code></strong></summary>
+请用小白能懂的话说明这些能力适合沉淀成哪些 AI 工作规则。
+```
 
-- 让 **gpt-5.1-codex** 或 **Claude Opus 4.5** 为你的游戏推荐最合适的技术栈（例如：多人3D游戏用 ThreeJS + WebSocket），保存为 `tech-stack.md`。
-  - 要求它提出 **最简单但最健壮** 的技术栈。
-- 在终端中打开 **Claude Code** 或 **Codex CLI**，使用 `/init` 命令，它会读取你已创建的两个 .md 文件，生成一套规则来正确引导大模型。
-- **关键：一定要审查生成的规则。** 确保规则强调 **模块化**（多文件）和禁止 **单体巨文件**（monolith）。可能需要手动修改或补充规则。
-  - **极其重要：** 某些规则必须设为 **"Always"**（始终应用），确保 AI 在生成任何代码前都强制阅读。例如添加以下规则并标记为 "Always"：
-    > ```
-    > # 重要提示：
-    > # 写任何代码前必须完整阅读 memory-bank/@architecture.md（包含完整数据库结构）
-    > # 写任何代码前必须完整阅读 memory-bank/@game-design-document.md
-    > # 每完成一个重大功能或里程碑后，必须更新 memory-bank/@architecture.md
-    > ```
-  - 其他（非 Always）规则要引导 AI 遵循你技术栈的最佳实践（如网络、状态管理等）。
-  - *如果想要代码最干净、项目最优化，这一整套规则设置是强制性的。*
-</details>
+#### 第 1 步：生成 Skill 设计文档
 
-<details>
-<summary><strong>3. 实施计划（Implementation Plan）</strong></summary>
+```text
+请基于刚才的分析，帮我设计一个钱包开发 Skill。
 
-- 将以下内容提供给 **gpt-5.1-codex** 或 **Claude Opus 4.5**：
-  - 游戏设计文档（`game-design-document.md`）
-  - 技术栈推荐（`tech-stack.md`）
-- 让它生成一份详细的 **实施计划**（Markdown 格式），包含一系列给 AI 开发者的分步指令。
-  - 每一步要小而具体。
-  - 每一步都必须包含验证正确性的测试。
-  - 严禁包含代码——只写清晰、具体的指令。
-  - 先聚焦于 **基础游戏**，完整功能后面再加。
-</details>
+Skill 目标：
+让 AI 以后处理钱包开发、交易分析、签名、广播相关任务时，不是凭空发挥，而是按固定安全流程工作。
 
-<details>
-<summary><strong>4. 记忆库（Memory Bank）</strong></summary>
+要求：
+1. 默认测试网优先。
+2. 签名前必须解释交易内容。
+3. 广播前必须二次确认。
+4. 不让 AI 接触真实助记词和私钥。
+5. 不把正式 API Key 放进前端环境变量。
+6. 先分析，再签名，最后才考虑广播。
+7. 如果用户要求主网操作，必须给出风险提醒。
+8. 如果用户粘贴交易 JSON，先输出人话摘要和风险点。
 
-- 新建项目文件夹，并在 VSCode 中打开。
-- 在项目根目录下创建子文件夹 `memory-bank`。
-- 将以下文件放入 `memory-bank`：
-  - `game-design-document.md`
-  - `tech-stack.md`
-  - `implementation-plan.md`
-  - `progress.md`（新建一个空文件，用于记录已完成步骤）
-  - `architecture.md`（新建一个空文件，用于记录每个文件的作用）
-</details>
+请先输出 Skill 设计文档，不要写代码。
+```
 
-</details>
+#### 第 2 步：生成 `skills/tokencore-wallet/SKILL.md`
 
-<details>
-<summary><strong>🎮 Vibe Coding 开发基础游戏</strong></summary>
+```text
+请根据 Skill 设计文档，创建或更新：
 
-现在进入最爽的阶段！
+skills/tokencore-wallet/SKILL.md
 
-<details>
-<summary><strong>确保一切清晰</strong></summary>
+要求：
+1. 文档使用中文。
+2. 面向 AI Agent，而不是普通用户。
+3. 写清楚触发场景。
+4. 写清楚必须遵守的钱包安全规则。
+5. 写清楚交易分析、签名、广播的工作顺序。
+6. 写清楚哪些事情不能做，例如接触真实助记词、私钥、正式 API Key。
+7. 不要加入和 Token Core CLI Demo 无关的内容。
+```
 
-- 在 VSCode 扩展中打开 **Codex** 或 **Claude Code**，或者在项目终端启动 Claude Code / Codex CLI。
-- 提示词：阅读 `/memory-bank` 里所有文档，`implementation-plan.md` 是否完全清晰？你有哪些问题需要我澄清，让它对你来说 100% 明确？
-- 它通常会问 9-10 个问题。全部回答完后，让它根据你的回答修改 `implementation-plan.md`，让计划更完善。
-</details>
+#### 第 3 步：用一个任务测试 Skill
 
-<details>
-<summary><strong>你的第一个实施提示词</strong></summary>
+```text
+请参考 skills/tokencore-wallet/SKILL.md，
+基于 imToken Token Core CLI Demo，设计一个钱包交易分析助手。
 
-- 打开 **Codex** 或 **Claude Code**（扩展或终端）。
-- 提示词：阅读 `/memory-bank` 所有文档，然后执行实施计划的第 1 步。我会负责跑测试。在我验证测试通过前，不要开始第 2 步。验证通过后，打开 `progress.md` 记录你做了什么供后续开发者参考，再把新的架构洞察添加到 `architecture.md` 中解释每个文件的作用。
-- **永远** 先用 "Ask" 模式或 "Plan Mode"（Claude Code 中按 `shift+tab`），确认满意后再让 AI 执行该步骤。
-- **极致 Vibe：** 安装 [Superwhisper](https://superwhisper.com)，用语音随便跟 Claude 或 gpt-5.1-codex 聊天，不用打字。
-</details>
+要求：
+1. 只支持测试网。
+2. 用户粘贴 tx request JSON 后，先给人话摘要。
+3. 再给风险检查结果。
+4. 最后才允许进入签名步骤。
+5. 广播前必须二次确认。
+6. 先给计划，不要直接写代码。
+```
 
-<details>
-<summary><strong>工作流</strong></summary>
+#### 第 4 步：保存 Skill 版本
 
-- 完成第 1 步后：
-  - 把改动提交到 Git（不会用就问 AI）。
-  - 新建聊天（`/new` 或 `/clear`）。
-  - 提示词：阅读 memory-bank 所有文件，阅读 progress.md 了解之前的工作进度，然后继续实施计划第 2 步。在我验证测试前不要开始第 3 步。
-- 重复此流程，直到整个 `implementation-plan.md` 全部完成。
-</details>
+```text
+这个 Skill 已经测试可以用。
+请帮我保存一个本地 Git 版本。
 
-</details>
-
-<details>
-<summary><strong>✨ 添加细节功能</strong></summary>
-
-恭喜！你已经做出了基础游戏！可能还很粗糙、缺少功能，但现在可以尽情实验和打磨了。
-- 想要雾效、后期处理、特效、音效？更好的飞机/汽车/城堡？绝美天空？
-- 每增加一个主要功能，就新建一个 `feature-implementation.md`，写短步骤+测试。
-- 继续增量式实现和测试。
-
-</details>
-
-<details>
-<summary><strong>🐞 修复 Bug 与卡壳情况</strong></summary>
-
-<details>
-<summary><strong>常规修复</strong></summary>
-
-- 如果某个提示词失败或搞崩了项目：
-  - Claude Code 用 `/rewind` 回退；用 gpt-5.1-codex 的话多提交 git，需要时 reset。
-- 报错处理：
-  - **JavaScript 错误：** 打开浏览器控制台（F12），复制错误，贴给 AI；视觉问题截图发给它。
-  - **懒人方案：** 安装 [BrowserTools](https://browsertools.agentdesk.ai/installation)，自动复制错误和截图。
-</details>
-
-<details>
-<summary><strong>疑难杂症</strong></summary>
-
-- 实在卡住：
-  - 回退到上一个 git commit（`git reset`），换新提示词重试。
-- 极度卡壳：
-  - 用 [RepoPrompt](https://repoprompt.com/) 或 [uithub](https://uithub.com/) 把整个代码库合成一个文件，然后丢给 **gpt-5.1-codex 或 Claude** 求救。
-</details>
-
-</details>
-
-<details>
-<summary><strong>💡 技巧与窍门</strong></summary>
-
-<details>
-<summary><strong>Claude Code & Codex 使用技巧</strong></summary>
-
-- **终端版 Claude Code / Codex CLI：** 在 VSCode 终端里运行，能直接看 diff、喂上下文，不用离开工作区。
-- **Claude Code 的 `/rewind`：** 迭代跑偏时一键回滚到之前状态。
-- **自定义命令：** 创建像 `/explain $参数` 这样的快捷命令，触发提示词：“深入分析代码，彻底理解 $参数 是怎么工作的。理解完告诉我，我再给你任务。” 让模型先拉满上下文再改代码。
-- **清理上下文：** 经常用 `/clear` 或 `/compact`（保留历史对话）。
-- **省时大法（风险自负）：** 用 `claude --dangerously-skip-permissions` 或 `codex --yolo`，彻底关闭确认弹窗。
-</details>
-
-<details>
-<summary><strong>其他实用技巧</strong></summary>
-
-- **小修改：** 用 gpt-5.1-codex (medium)
-- **写顶级营销文案：** 用 Opus 4.1
-- **生成优秀 2D 精灵图：** 用 ChatGPT + Nano Banana
-- **生成音乐：** 用 Suno
-- **生成音效：** 用 ElevenLabs
-- **生成视频：** 用 Sora 2
-- **提升提示词效果：**
-  - 加一句：“慢慢想，不着急，重要的是严格按我说的做，执行完美。如果我表达不够精确请提问。”
-  - 在 Claude Code 中触发深度思考的关键词强度：`think` < `think hard` < `think harder` < `ultrathink`。
-</details>
-
-</details>
-
-<details>
-<summary><strong>❓ 常见问题解答 (FAQ)</strong></summary>
-
-- **Q: 我在做应用不是游戏，这个流程一样吗？**
-  - **A:** 基本完全一样！把 GDD 换成 PRD（产品需求文档）即可。你也可以先用 v0、Lovable、Bolt.new 快速原型，再把代码搬到 GitHub，然后克隆到本地用本指南继续开发。
-
-- **Q: 你那个空战游戏的飞机模型太牛了，但我一个提示词做不出来！**
-  - **A:** 那不是一个提示词，是 ~30 个提示词 + 专门的 `plane-implementation.md` 文件引导的。用精准指令如“在机翼上为副翼切出空间”，而不是“做一个飞机”这种模糊指令。
-
-- **Q: 为什么现在 Claude Code 或 Codex CLI 比 Cursor 更强？**
-  - **A:** 完全看个人喜好。我们强调的是：Claude Code 能更好发挥 Claude Opus 4.5 的实力，Codex CLI 能更好发挥 gpt-5.1-codex 的实力，而 Cursor 对这两者的利用都不如原生终端版。终端版还能在任意 IDE、使用 SSH 远程服务器等场景工作，自定义命令、子代理、钩子等功能也能长期大幅提升开发质量和速度。最后，即使你只是低配 Claude 或 ChatGPT 订阅，也完全够用。
-
-- **Q: 我不会搭建多人游戏的服务器怎么办？**
-  - **A:** 问你的 AI。
-
-</details>
+要求：
+1. 先检查 git status。
+2. 只提交 skills/tokencore-wallet/SKILL.md 和必要文档。
+3. 确认没有助记词、私钥、API Key。
+4. commit message 使用：docs: add token core wallet skill guide
+5. 不需要推送 GitHub，除非我明确要求。
+```
 
 ---
 
-## 📞 联系方式
+## 做坏了怎么办
 
--   **GitHub**: [tukuaiai](https://github.com/tukuaiai)
--   **Twitter / X**: [123olp](https://x.com/123olp)
--   **Telegram**: [@desci0](https://t.me/desci0)
--   **Telegram 交流群**: [glue_coding](https://t.me/glue_coding)
--   **Telegram 频道**: [tradecat_ai_channel](https://t.me/tradecat_ai_channel)
--   **邮箱**: tukuai.ai@gmail.com (回复可能不及时)
+小白一定会遇到报错。不要慌，报错是正常开发的一部分。
+
+### 页面报错
+
+把报错复制给 AI：
+
+```text
+我运行 imToken 钱包 Demo 时报错了。下面是错误信息。
+请先解释这个错误是什么意思，再告诉我最可能的 3 个原因。
+先不要改代码，先给排查步骤。
+如果错误和 Passkey、WASM、Sepolia 网络或环境变量有关，请单独指出。
+
+错误信息：
+【粘贴错误】
+```
+
+### 页面不好看
+
+不要说“优化一下”，要指出具体问题：
+
+```text
+这个钱包页面看起来太拥挤。请只调整布局和间距，不要改功能。
+目标风格：干净、可信、像 imToken 的测试网钱包 Demo，不要像营销页。
+请先说明你准备改哪些地方，再执行。
+```
+
+### AI 改乱了
+
+立刻停止继续加需求。
+
+```text
+现在项目可能被改乱了。请先不要继续写新功能。
+请帮我检查最近改动，总结哪些文件被改了，哪些改动可能有风险。
+然后给我一个回退或修复方案。
+```
+
+如果你已经用 GitHub 保存过版本，就可以回到上一个稳定版本。
+
+### 聊天太长了
+
+长对话容易让 AI 忘记重点。
+
+做法：
+
+1. 让 AI 总结当前项目状态。
+2. 保存到 `progress.md`。
+3. 新开聊天。
+4. 让新聊天先读文档再继续。
+
+可复制提示词：
+
+```text
+请总结当前项目状态，写成 progress.md 的内容。
+包括：已经完成什么、还没完成什么、已知问题、下一步建议。
+```
+
+新聊天开头：
+
+```text
+请先阅读 project-brief.md、tech-stack.md、design.md、implementation-plan.md、progress.md 和 review-checklist.md。
+读完后总结你理解的项目状态。
+先不要写代码。
+```
 
 ---
 
-## ✨ 支持项目
+## 新手项目目录
 
-救救孩子，感谢了，好人一生平安🙏🙏🙏
+建议每个 AI 项目都保留这些文件：
 
--   **Tron (TRC20)**: `TQtBXCSTwLFHjBqTS4rNUp7ufiGx51BRey`
--   **Solana**: `HjYhozVf9AQmfv7yv79xSNs6uaEU5oUk2USasYQfUYau`
--   **Ethereum (ERC20)**: `0xa396923a71ee7D9480b346a17dDeEb2c0C287BBC`
--   **BNB Smart Chain (BEP20)**: `0xa396923a71ee7D9480b346a17dDeEb2c0C287BBC`
--   **Bitcoin**: `bc1plslluj3zq3snpnnczplu7ywf37h89dyudqua04pz4txwh8z5z5vsre7nlm`
--   **Sui**: `0xb720c98a48c77f2d49d375932b2867e793029e6337f1562522640e4f84203d2e`
--   **币安 UID**: `572155580`
+```text
+your-project/
+├── project-brief.md          # 项目说明
+├── tech-stack.md             # 技术方案
+├── design.md                 # 设计规范
+├── implementation-plan.md    # 实施计划
+├── progress.md               # 进度记录
+├── review-checklist.md       # 验收清单
+├── README.md                 # 给人看的项目说明
+└── src/ 或 app/              # 代码目录
+```
+
+最重要的是文档，不是代码。
+
+因为 AI 需要上下文，而文档就是上下文。
+
+文件命名建议：
+
+- `README.md` 这种全大写文件名很常见，适合作为“人优先阅读”的入口文档。
+- `project-brief.md`、`tech-stack.md`、`design.md`、`implementation-plan.md`、`review-checklist.md` 这种小写加短横线的命名也很常见，适合项目内部规划文档。
+- 本教程统一使用 `design.md`，方便和其它规划文档保持同一种命名风格。
+- 搜索这些文件时，优先用 `rg --files` 或 `find`，不要手动翻目录。
+
+常用搜索命令：
+
+```bash
+# 精确查看这几个规划文档是否存在
+ls -1 README.md project-brief.md tech-stack.md design.md implementation-plan.md review-checklist.md
+
+# 在项目里搜索这些文档名出现的位置
+rg -n "project-brief.md|tech-stack.md|design.md|implementation-plan.md|review-checklist.md" .
+
+# 只列出 Markdown 文件，适合交给 AI 先读上下文
+rg --files -g "*.md"
+```
 
 ---
 
-### ✨ 贡献者
+## 进阶学习路线
 
-感谢所有为本项目做出贡献的开发者！
+参考 Stanford CS146S 和 Mihail Eric 的作业结构，可以按这个顺序进阶：
 
-<a href="https://github.com/tukuaiai/vibe-coding-cn/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=tukuaiai/vibe-coding-cn" />
-  <img src="https://contrib.rocks/image?repo=EnzeD/vibe-coding" />
-</a>
+| 阶段 | 学什么 | 你能获得什么 |
+| --- | --- | --- |
+| 1 | 提示词基础 | 让 AI 更稳定地理解你 |
+| 2 | Cursor 项目实践 | 会用 AI 改真实项目 |
+| 3 | 项目文档和规则 | 让 AI 读得懂你的项目 |
+| 4 | MCP 和工具调用 | 让 AI 连接外部工具和数据 |
+| 5 | 自动化工作流 | 把测试、文档、重构变成可复用流程 |
+| 6 | 安全扫描 | 用工具发现明显风险 |
+| 7 | 代码 Review | 学会检查 AI 写的代码 |
+| 8 | 多技术栈和部署 | 同一个想法能用不同方式实现并上线 |
 
-<p>特别鸣谢以下成员的宝贵贡献 (排名不分先后):<br/>
-<a href="https://x.com/shao__meng">@shao__meng</a> |
-<a href="https://x.com/0XBard_thomas">@0XBard_thomas</a> |
-<a href="https://x.com/Pluvio9yte">@Pluvio9yte</a> |
-<a href="https://x.com/xDinoDeer">@xDinoDeer</a> |
-<a href="https://x.com/geekbb">@geekbb</a>
-<a href="https://x.com/GitHub_Daily">@GitHub_Daily</a>
-</p>
-
----
-
-## 🤝 参与贡献
-
-我们热烈欢迎各种形式的贡献。如果您对本项目有任何想法或建议，请随时开启一个 [Issue](https://github.com/tukuaiai/vibe-coding-cn/issues) 或提交一个 [Pull Request](https://github.com/tukuaiai/vibe-coding-cn/pulls)。
-
-在您开始之前，请花时间阅读我们的 [**贡献指南 (CONTRIBUTING.md)**](CONTRIBUTING.md) 和 [**行为准则 (CODE_OF_CONDUCT.md)**](CODE_OF_CONDUCT.md)。
+你不需要一天学完。每做一个小项目，就补一块能力。
 
 ---
 
-## 📜 许可证
+## 本仓库怎么用
+
+这个仓库不是一个单独的软件项目，而是一个 AI 编程资料库。
+
+你可以这样使用：
+
+- `prompts/`：找提示词模板。
+- `skills/`：找特定工具或领域的 AI 技能。
+- `documents/`：看方法论、开发经验、项目模板。
+- `libs/external/prompts-library/`：管理提示词的 Excel 与 Markdown 转换工具。
+- `libs/common/utils/backups/`：本地备份脚本，做大改动前可以参考。
+
+如果你是小白，建议先从这几个入口开始：
+
+1. 读完本 README。
+2. 复制“如何一步一步开始”里的提示词。
+3. 做一个最小 imToken 钱包 Demo。
+4. 部署到 Vercel。
+5. 再回来研究提示词库和技能库。
+
+---
+
+## 常见问题
+
+### 我完全不会代码，可以学吗？
+
+可以，但你不能完全不看结果。
+
+你不需要一开始手写代码，但你需要学会：
+
+- 描述需求
+- 看页面结果
+- 复制报错
+- 判断功能是否符合预期
+- 保存版本
+
+### AI 能不能直接做完整软件？
+
+可以做出原型，但生产级软件仍然需要人的规划、测试和评审。
+
+纯粹“随便说一句，让 AI 全权发挥”很容易得到一个看起来能跑、后面很难维护的项目。
+
+### 我应该先学编程，还是先学 Vibe Coding？
+
+可以同时来。
+
+先用 Vibe Coding 做出东西，建立反馈感；再反过来学习 HTML、CSS、JavaScript、Python、数据库这些基础，会更有动力。
+
+### 项目越改越乱怎么办？
+
+通常是因为没有计划、没有版本保存、一次改太多。
+
+解决方法：
+
+- 新需求先写进计划
+- 每次只改一个点
+- 改完就验证
+- 稳定后保存到 GitHub
+- 大改动前让 AI 先读文档
+
+### 什么时候该新开聊天？
+
+当出现这些情况时，建议新开：
+
+- 对话太长
+- AI 开始忘记前面约定
+- 一个功能已经完成
+- 项目方向发生变化
+- 你要从修 bug 切换到做新功能
+
+新聊天前，让 AI 先写 `progress.md`。
+
+---
+
+## 参考资料
+
+- [CS146S: The Modern Software Developer](https://bulletin.stanford.edu/courses/2274401)
+- [CS146S Assignments](https://github.com/mihail911/modern-software-dev-assignments)
+- [Mihail Eric: AI Software Development](https://maven.com/the-modern-software-developer/ai-course)
+- [Cursor](https://cursor.com/)
+- [GitHub](https://github.com/)
+- [Vercel](https://vercel.com/)
+- [imToken TokenCore WASM](https://github.com/consenlabs/token-core-monorepo/tree/tenth-anniversary/token-core/tcx-wasm)
+- [imToken Token Core CLI Demo](https://github.com/consenlabs/token-core-monorepo/tree/demo/token-core-cli/token-core/tcx-examples/cli)
+- [OpenAI Models](https://developers.openai.com/api/docs/models)
+- [Claude Opus 4.7](https://www.anthropic.com/news/claude-opus-4-7)
+- [Gemini Models](https://ai.google.dev/gemini-api/docs/models)
+- [DeepSeek API Docs](https://api-docs.deepseek.com/)
+- [Qwen Code Docs](https://qwenlm.github.io/qwen-code-docs/)
+
+---
+
+## 许可证
 
 本项目采用 [MIT](LICENSE) 许可证。
-
----
-
-<div align="center">
-
-**如果这个项目对您有帮助，请考虑为其点亮一颗 Star ⭐！**
-
-## Star History
-
-<a href="https://www.star-history.com/#tukuaiai/vibe-coding-cn&type=date&legend=top-left">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=tukuaiai/vibe-coding-cn&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=tukuaiai/vibe-coding-cn&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=tukuaiai/vibe-coding-cn&type=date&legend=top-left" />
- </picture>
-</a>
-
----
-
-**由 [tukuaiai](https://github.com/tukuaiai), [Nicolas Zullo](https://x.com/NicolasZu), 和 [123olp](https://x.com/123olp) 倾力打造**
-
-[⬆ 返回顶部](#vibe-coding-指南)
-</div>
