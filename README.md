@@ -24,25 +24,6 @@
 
 ---
 
-## 先看这一段
-
-如果你完全不会编程，也可以先从这里开始。
-
-Vibe Coding 的核心不是“学会写代码”，而是“学会把想法讲清楚，让 AI 帮你把软件做出来”。
-
-你不需要一开始就理解所有代码。你需要先学会四件事：
-
-1. 说清楚你要什么。
-2. 让 AI 先给计划，不要一上来乱写。
-3. 每次只做一个小功能。
-4. 跑起来检查，确认没问题再继续。
-
-一句话版本：
-
-> 你负责方向、判断和验收；AI 负责生成、修改和解释。
-
----
-
 ## 什么是 Vibe Coding
 
 简单来说：
@@ -123,10 +104,10 @@ AI 负责：
 
 | 场景 | 推荐 |
 | --- | --- |
-| 复杂项目、长任务、重构 | Claude Opus 4.7、GPT-5.5、GPT-5.2-Codex |
-| Cursor 内优先尝试 | Claude Opus 4.7、GPT-5.5、Composer 2 |
-| 国内或低成本备选 | GLM-5.1、Kimi K2.6、DeepSeek V4-Pro / V4-Flash、MiniMax M2.5、Qwen 3.6 Plus |
-| Google 路线 | Gemini 3.1 Pro Preview |
+| 复杂项目、长任务、重构 | [Claude Opus 4.7](https://www.anthropic.com/news/claude-opus-4-7)、[GPT-5.5](https://openai.com/index/introducing-gpt-5-5/)、[GPT-5.2-Codex](https://openai.com/index/introducing-gpt-5-2-codex/) |
+| Cursor 内优先尝试 | [Claude Opus 4.7](https://www.anthropic.com/news/claude-opus-4-7)、[GPT-5.5](https://openai.com/index/introducing-gpt-5-5/)、[Composer 2](https://cursor.com/blog/composer-2) |
+| 国内或低成本备选 | [GLM-5.1](https://docs.z.ai/guides/llm/glm-5.1)、[Kimi K2.6](https://www.kimi.com/ai-models/kimi-k2-6)、[DeepSeek V4-Pro / V4-Flash](https://api-docs.deepseek.com/news/news260424)、[MiniMax M2.5](https://www.minimax.io/models/text)、[Qwen 3.6 Plus](https://docs.qwencloud.com/developer-guides/getting-started/text-generation-models) |
+| Google 路线 | [Gemini 3.1 Pro Preview](https://deepmind.google/models/model-cards/gemini-3-1-pro) |
 
 <details>
 <summary>进阶工具：跑通第一个项目后再看</summary>
