@@ -246,7 +246,7 @@ AI 编程时代，写代码本身反而不是最重要的部分。
 这一节只保留两个可以跟做的 Demo，不讲大段概念。
 
 1. **Demo 1**：基于 Token Core WASM 做 Passkey 多链地址 Demo。
-2. **Demo 2**：基于 Token Core CLI Demo 做一个给 AI 用的钱包 Skill。
+2. **Demo 2**：基于 TokenCore WASM 做一个给 AI 用的钱包 Skill。
 
 ### Demo 1：基于 Token Core WASM 做 Passkey 多链地址 Demo
 
@@ -583,103 +583,31 @@ Windows 或 Linux 用户可以按 GitHub 官方文档安装：
 
 ---
 
-### Demo 2：基于 Token Core CLI Demo 做 AI Skill
-
-参考项目：
-
-- [Token Core CLI Demo](https://github.com/consenlabs/token-core-monorepo/tree/demo/token-core-cli/token-core/tcx-examples/cli)
-
-这个 Demo 的目标不是再做一个网页钱包，而是做一个给 AI 用的 Skill。以后你让 AI 做钱包、签名、交易分析、广播相关功能时，它会先按这个 Skill 的规则工作。
-
-#### 第 0 步：让 AI 阅读 CLI Demo
-
-```text
-请阅读这个 Token Core CLI Demo：
-https://github.com/consenlabs/token-core-monorepo/tree/demo/token-core-cli/token-core/tcx-examples/cli
-
-目标：
-我要基于它做一个给 AI 用的钱包 Skill。
-
-请先不要写代码。
-请先总结这个 CLI Demo 里有哪些能力，例如：
-1. 创建钱包。
-2. 导入钱包。
-3. 列出钱包。
-4. 分析交易请求或 signed raw tx。
-5. 签名交易。
-6. 广播交易。
-7. policy 预检查。
-8. Tenderly 模拟。
-9. AI 交易摘要。
-
-请用小白能懂的话说明这些能力适合沉淀成哪些 AI 工作规则。
-```
+### Demo 2：基于 TokenCore WASM 做 AI Skill
 
 #### 第 1 步：生成 Skill 设计文档
 
 ```text
-请基于刚才的分析，帮我设计一个钱包开发 Skill。
-
-Skill 目标：
-让 AI 以后处理钱包开发、交易分析、签名、广播相关任务时，不是凭空发挥，而是按固定安全流程工作。
-
-要求：
-1. 默认测试网优先。
-2. 签名前必须解释交易内容。
-3. 广播前必须二次确认。
-4. 不让 AI 接触真实助记词和私钥。
-5. 不把正式 API Key 放进前端环境变量。
-6. 先分析，再签名，最后才考虑广播。
-7. 如果用户要求主网操作，必须给出风险提醒。
-8. 如果用户粘贴交易 JSON，先输出人话摘要和风险点。
-
-请先输出 Skill 设计文档，不要写代码。
+基于 TokenCore WASM，帮我设计一个钱包批量创建 Wallet batch Skill。
+可以通过自然语言让 AI 以后批量创建，比如说可以实现 【使用 Wallet Batch Skill，批量创建 10 个以太坊钱包】
+注意不让 AI 接触真实助记词、私钥、密码、Passkey PRF key 或 keystore 内容。请先输出 Skill 设计文档，不要写代码。
+TokenCore WASM 链接：https://github.com/consenlabs/token-core-monorepo/tree/tenth-anniversary/token-core/tcx-wasm
 ```
 
-#### 第 2 步：生成 `skills/tokencore-wallet/SKILL.md`
+#### 第 2 步：生成 Skill
 
 ```text
-请根据 Skill 设计文档，创建或更新：
-
-skills/tokencore-wallet/SKILL.md
-
-要求：
-1. 文档使用中文。
-2. 面向 AI Agent，而不是普通用户。
-3. 写清楚触发场景。
-4. 写清楚必须遵守的钱包安全规则。
-5. 写清楚交易分析、签名、广播的工作顺序。
-6. 写清楚哪些事情不能做，例如接触真实助记词、私钥、正式 API Key。
-7. 不要加入和 Token Core CLI Demo 无关的内容。
+请根据 Skill 设计文档，使用 skill-creator 创建我的 Skill。
+Skill 应基于 @consenlabs/tcx-wasm 的 create_keystore 与 derive_accounts。
+https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md
 ```
 
-#### 第 3 步：用一个任务测试 Skill
+#### 第 3 步：保存 Skill
 
 ```text
-请参考 skills/tokencore-wallet/SKILL.md，
-基于 imToken Token Core CLI Demo，设计一个钱包交易分析助手。
+测试我的 Skill，然后写一个 AI 使用说明 README.md，帮我提交到 github
+https://github.com/makoshan/wallet-skill
 
-要求：
-1. 只支持测试网。
-2. 用户粘贴 tx request JSON 后，先给人话摘要。
-3. 再给风险检查结果。
-4. 最后才允许进入签名步骤。
-5. 广播前必须二次确认。
-6. 先给计划，不要直接写代码。
-```
-
-#### 第 4 步：保存 Skill 版本
-
-```text
-这个 Skill 已经测试可以用。
-请帮我保存一个本地 Git 版本。
-
-要求：
-1. 先检查 git status。
-2. 只提交 skills/tokencore-wallet/SKILL.md 和必要文档。
-3. 确认没有助记词、私钥、API Key。
-4. commit message 使用：docs: add token core wallet skill guide
-5. 不需要推送 GitHub，除非我明确要求。
 ```
 
 </details>
@@ -923,7 +851,6 @@ rg --files -g "*.md"
 - [GitHub](https://github.com/)
 - [Vercel](https://vercel.com/)
 - [imToken TokenCore WASM](https://github.com/consenlabs/token-core-monorepo/tree/tenth-anniversary/token-core/tcx-wasm)
-- [imToken Token Core CLI Demo](https://github.com/consenlabs/token-core-monorepo/tree/demo/token-core-cli/token-core/tcx-examples/cli)
 - [OpenAI Models](https://developers.openai.com/api/docs/models)
 - [Claude Opus 4.7](https://www.anthropic.com/news/claude-opus-4-7)
 - [Gemini Models](https://ai.google.dev/gemini-api/docs/models)

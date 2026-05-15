@@ -1,0 +1,4 @@
+interface:
+  display_name: "Wallet Batch Skill"
+  short_description: "用 TokenCore WASM 安全批量创建钱包，只输出非敏感地址清单。"
+  default_prompt: "使用 Wallet Batch Skill，基于 @consenlabs/tcx-wasm 批量创建测试网钱包；不要读取或输出助记词、私钥、密码、PRF key 或 keystore 内容，只生成地址清单和 manifest。"
