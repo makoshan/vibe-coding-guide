@@ -87,7 +87,7 @@ AI 负责：
 
 第一阶段不要追求工具最全，只追求流程跑通：
 
-> Cursor 做钱包 Demo → GitHub 保存 → Github Page 部署 → 链接发给别人看。
+> Cursor 做钱包 Demo → GitHub 保存 → Vercel 部署 → 链接发给别人看。
 
 ---
 
@@ -293,7 +293,7 @@ AI 编程时代，写代码本身反而不是最重要的部分。
 2. 注册 GitHub。
 3. 安装 Git。
 4. 安装 GitHub CLI，命令叫 gh。
-5. 注册 Vercel 或确认我可以用 GitHub Pages 部署。
+5. 注册 Vercel。
 
 请每一步都告诉我：
 1. 去哪里下载或注册。
